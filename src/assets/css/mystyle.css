@@ -1,0 +1,429 @@
+/* CSS RESET */
+/* Authors: Hunter
+
+
+
+/* BODY 主体页面
+===============================================================*/
+body {
+  margin: 8px !important;
+  background-color: var(--color-background);
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  user-select: none;
+  /* 禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent;
+  /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+  color: var(--color-text);
+  /* width: 100vw; */
+}
+
+
+/* HEADERS 标题
+===============================================================*/
+
+
+
+
+
+/* HEADERS 标题修饰
+===============================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 强调对象
+===============================================================*/
+strong,
+b {
+  color: #BF360C;
+}
+
+/*<strong> （重要的文本）*/
+em,
+i {
+  color: #009688;
+}
+
+/*em——被强调的文本*/
+mark>
+/*mark——（被标记的/高亮显示的文本）*/
+cite
+/*cite——作品的标题*/
+dfn （一个定义项目）
+/* 段落
+===============================================================*/
+
+
+
+
+
+/* HORIZONTAL RULES 水平线类型
+=============================================================================*/
+hr {
+  /*分隔线*/
+  clear: both;
+  margin: 15px auto;
+  height: 0px;
+  text-align: left;
+  color: #999;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  /*0.5em dotted rgb(129, 129, 129);*/
+  padding: 0;
+}
+
+
+
+/* LINKS 链接
+  ===============================================================*/
+a {
+  /*超链接*/
+  color: var(--color-href-text);
+  /* color: #0099ff; */
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+
+
+a:hover {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+a:visited {
+  color: purple;
+}
+
+
+
+
+
+
+/* LIST 列表
+===============================================================*/
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  /*无序列表*/
+  list-style-type: disc;
+}
+
+ol {
+  /*有序列表*/
+  list-style-type: decimal;
+}
+
+li {
+  /*在公众号下，改变不了li符号的属性（如颜色），并会影响其子元素的属性;而在其它博客平台中，则能正常使用*/
+  line-height: 24px;
+  margin-left: 24px;
+  color: #464646;
+}
+
+li ul,
+li ul {
+  margin-left: 24px;
+}
+
+p,
+ul,
+ol {
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 540px;
+}
+
+
+
+/* CODE 代码     <per>多行代码显示；<code>行内代码样式
+===============================================================*/
+pre {
+  padding: 0px 24px;
+  max-width: 800px;
+  white-space: pre-wrap;
+  line-height: 30px;
+}
+
+
+code {
+  /*code——定义计算机代码文本。*/
+  font-family: Consolas, Roboto, 'Courier New', Inconsolata, Monaco, Andale Mono, monospace;
+  line-height: 1.5rem;
+  /*1.5倍行距*/
+  font-size: 16px;
+  /*字体大小14px*/
+  font-weight: 400;
+  margin: 0 3px;
+  padding: 3px 5px;
+  white-space: pre-wrap;
+  /*？？？*/
+  border: 1px solid #EAEAEA;
+  background-color: rgba(255, 236, 236, 0.767);
+  /*代码底色白色*/
+  border-radius: 2px;
+  /*？？？*/
+  display: inline;
+  /*？？？好像本来就是inline的*/
+}
+
+
+pre code {
+  /*pre code 边框*/
+  white-space: pre;
+  overflow: auto;
+  /* fixes issue #70: Firefox/Thunderbird: Code blocks with horizontal scroll would have bad background colour */
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 0.5em 0.7em;
+  display: block !important;
+  /* added to counteract the Yahoo-specific `code` rule; without this, code blocks in Blogger are broken */
+}
+
+
+aside {
+  display: block;
+  float: right;
+  width: 390px;
+}
+
+
+
+/* QUOTES 引用块
+===============================================================*/
+
+
+
+blockquote {
+  /*引用块*/
+  border-left: 0.5rem solid #009688;
+  padding: 0.5rem 2rem;
+  /*引用块左侧和上下的边距*/
+  margin-left: 1rem;
+  /*引用块距离左侧页边距*/
+  margin-right: 1rem;
+  max-width: 476px;
+  background-color: #f8f8ff;
+}
+
+blockquote cite {
+  font-size: 14px;
+  line-height: 20px;
+  color: #002077;
+}
+
+
+blockquote cite:before ，blockquote::after {
+  content: '\2014 \00A0';
+}
+
+/*{content: none;}*/
+
+
+
+blockquote:before {
+  /*引用前加引号*/
+  content: "\201C";
+  font-size: 40px;
+  margin-left: -10px;
+  font-family: georgia, serif;
+  color: #009688;
+}
+
+
+
+
+
+blockquote p {
+  /*引用块内文字段落属性*/
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  max-width: 460px;
+}
+
+
+
+
+/* 自定义引用块
+===============================================================*/
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 30px;
+  border: 1px solid #eee;
+  border-left-width: 8px;
+  border-radius: 3px;
+}
+
+.bs-callout-info {
+  border-left-color: #0692bd;
+}
+
+.bs-callout-danger {
+  border-left-color: #ce4844;
+}
+
+
+
+
+
+/* TABLES
+=============================================================================*/
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 15px;
+  font: inherit;
+  border: 0;
+  text-align: center;
+  margin-left: 22px;
+  margin-right: 20px;
+}
+
+tbody {
+  margin-left: 22px;
+  margin-right: 20px;
+}
+
+table th {
+  /*th头*/
+  font-weight: bold;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #F5F5F5;
+  color: #000000;
+}
+
+table th,
+table td {
+  /*td标准单元格*/
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  /*tr行*/
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+
+.katex-display {
+  /*数学公式*/
+  font-size: 1.5em;
+}
+
+a[href^="#"] sup {
+  /*注脚*/
+  vertical-align: super;
+  margin: 0 2px;
+  padding: 1px 3px;
+  color: #ffffff;
+  background: #666666;
+  font-size: 0.7em;
+}
+
+/*================任务列表开始================*/
+.task-list-list {
+  list-style-type: none;
+}
+
+.task-list-list.checked {
+  /*已完成*/
+  color: #3e3e3e;
+}
+
+.task-list-list.uncheck {
+  /*未完成*/
+  color: #bfc1bf;
+}
+
+.task-list-list .icon_uncheck,
+.task-list-list .icon_check {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.task-list-list .icon_check:before {
+  /*已完成*/
+  content: "√";
+  border: 2px solid #3e3e3e;
+  color: red;
+}
+
+.task-list-list .icon_uncheck:before {
+  /*未完成*/
+  content: "x";
+  border: 2px solid #bfc1bf;
+  color: #bfc1bf;
+}
+
+.task-list-list .icon_check:before,
+.task-list-list .icon_uncheck:before {
+  /*标志框*/
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 8px;
+  border-radius: 5px;
+}
+
+/*================任务列表结束================*/
+
+
+
+/* 自定义绘图
+=============================================================================*/
+
+.myrect {
+  fill: green;
+  stroke: black;
+  stroke-width: 3px;
+
+}
+
+div.bar {
+  display: inline-block;
+  width: 20px;
+  height: 105px;
+  background-color: teal;
+  margin-right: 2px
+}
+
+/* 定义坐标轴 类axis 下的path，line，text元素的样式。 */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgb(116, 0, 0);
+  stroke-width: 3px;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-family: sans-serif;
+  font-size: 13px;
+}

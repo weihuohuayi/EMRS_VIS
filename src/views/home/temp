@@ -1,0 +1,9 @@
+ 
+<router-link to='/home' tag="button" replace>首页</router-link>
+
+    
+    <button @click='userClick'>动态路由用户2</button>
+
+    <button @click='profileClick'>档案2</button>
+
+ 

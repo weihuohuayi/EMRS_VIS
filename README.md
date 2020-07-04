@@ -1,4 +1,4 @@
-# malldemo
+# EMRS
 
 ## Project setup
 ```
