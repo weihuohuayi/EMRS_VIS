@@ -48,7 +48,7 @@
     width: 30%;
     /* 每行盛放的元素个数 */
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     margin-bottom: -1px;
     /* 边框 */
     /* border-style: solid;
@@ -62,7 +62,9 @@
   }
 
   .sudoku_item img {
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     display: block;
+    width: 40px;
+    height: 40px
   }
 </style>

@@ -5,28 +5,31 @@
       <div slot="center">欢迎页</div>
     </nav-bar>
     <!-- 轮播图 -->
-    <!-- <home-banner /> -->
-    <swiper>
-      <swiper-item v-for="(item,index) in banners" :key="index">
-        <a :href="item.link">
-          <img :src="item.image" alt="" />
-        </a>
+    <home-swiper :banners="banners" />
+
+    <!-- <swiper>
+      <swiper-item v-for=" (item,index) in banners" :key="index">
+      <a :href="item.link">
+        <img :src="item.image" alt="" />
+      </a>
       </swiper-item>
-    </swiper>
-
-
+      </swiper> -->
 
     <p style="text-align: center;">{{msg}}</p>
     <hr>
 
     <!-- 九宫格 -->
-    <sudoku>
+    <home-sudoku :sudokus="sudokus" />
+    <!-- <sudoku>
       <sudoku-item v-for="(sudoku,index) in sudokus" :key="index" :sudoku="sudoku" :sudokus="sudokus" :index="index">
-        <img :src="sudoku.img_src" width="40" height="40">
+        <a href="#">
+          <img :src="sudoku.img_src" width="40" height="40">
+        </a>
         {{sudoku.name}}
       </sudoku-item>
-    </sudoku>
+    </sudoku> -->
     <hr>
+    <TESword />
 
 
 
@@ -44,23 +47,27 @@
 </template>
 
 <script>
-  import NavBar from 'components/common/navbar/NavBar'
-  import HomeBanner from './childComps/HomeBanner'
-  import { getHomeMultiimg } from 'network/home'
+  // 导入子组件
+  import HomeSwiper from './childComps/HomeSwiper'
+  import HomeSudoku from './childComps/HomeSudoku'
+  import TESword from './childComps/TESword'
 
-  import { Swiper, SwiperItem } from 'components/common/swiper';
-  import { Sudoku, SudokuItem } from 'components/common/sudoku';
+  // 导入公共组件
+  import NavBar from 'components/common/navbar/NavBar'
+
+  // 导入方法
+  import { getHomeMultiimg } from 'network/home'
 
 
   export default {
     name: 'Home',
     components: {
-      NavBar,
-      HomeBanner,
-      Swiper,
-      SwiperItem,
-      Sudoku,
-      SudokuItem
+      // 子组件
+      HomeSwiper,
+      HomeSudoku,
+      TESword,
+      // 公共组件
+      NavBar
     },
     data() {
       return {
