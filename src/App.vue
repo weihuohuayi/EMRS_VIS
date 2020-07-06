@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 
+    <!-- 基于路由配置的相关关系进行对应的显示 -->
     <!-- 保持组件创建状态 ,排除exclude-->
     <keep-alive exclude='Profile'>
       <router-view></router-view>

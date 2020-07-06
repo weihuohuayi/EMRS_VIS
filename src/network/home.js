@@ -1,22 +1,14 @@
-import { requestAxios, request } from 'network/api'
+// 对首页需要请求的所有数据进行封装管理
 
-
-
-
-// 自定义函数格式request(config,sucess, failure)
-// requestAxios(
-//   { url: '/临时3.json' },  //config
-//   res => console.log(res),//sucess
-// )
+import { requestpic } from 'network/api'
 
 // 获取图片
 export function getHomeMultiimg() {
-  return request({
-    url: '/临时3.json',
+  return requestpic({
+    url: '',
+  }).then(res => {
+    console.log(res);
+  }).catch(err => {
+    console.log(err);
   })
-  //   .then(res => {
-  //   console.log(res);
-  // }).catch(err => {
-  //   console.log(err);
-  // })
 }

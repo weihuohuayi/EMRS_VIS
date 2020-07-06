@@ -1,9 +1,7 @@
 <template>
   <tab-bar>
     <tab-bar-item link='/home'>
-      <!-- <img slot="item-icon" src="../assets/img/tabbar/homepage.jpg" alt=""> -->
       <img slot="item-icon" src="~assets/img/tabbar/homepage.jpg" alt="">
-
       <div slot="item-text">首页</div>
     </tab-bar-item>
     <tab-bar-item link='/patients'>
@@ -26,8 +24,6 @@
 </template>
 
 <script>
-  // import TabBar from './tabbar/TabBar'
-  // import TabBarItem from './tabbar/TabBarItem'
   import TabBar from 'components/common/tabbar/TabBar'
   import TabBarItem from 'components/common/tabbar/TabBarItem'
 
