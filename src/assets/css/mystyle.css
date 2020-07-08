@@ -10,11 +10,14 @@
 
   --color-href-text: rgb(36, 141, 202);
 
-  --color-high-text: #ff5777;
+  --color-high-text: #0331b1;
   /* 高亮文本风格 */
 
-  --color-tint: #af0000bd;
-  /* 块背景颜色，涂上去的颜色，导航栏 */
+  --color-tint: #af0000be;
+  /* 块背景颜色，涂上去的颜色，半透明 */
+
+  --color-block: #006cd1;
+  /* 块背景颜色，导航栏 */
 
   --color-background: #ffffff;
   /* 灰色背景 */
@@ -22,7 +25,9 @@
   --font-size: 14px;
   --line-height: 1.5;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --navbar-height: 44px
 }
 
 /* 使用伪类 */
@@ -43,7 +48,8 @@
 /* BODY 主体页面
 ===============================================================*/
 body {
-  margin: 8px !important;
+  margin-left: 8px;
+  margin-right: 8px;
   background-color: var(--color-background);
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   user-select: none;

@@ -168,11 +168,21 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  #home {
+    padding-top: var(--navbar-height);
+  }
+
   /* 导航 */
   .home-nav {
     background-color: var(--color-tint);
     color: white;
     font-weight: bolder;
+    position: fixed;
+    /* left: 0;
+    right: 0;
+    top: 0; */
+    z-index: 9;
+
   }
 
   h1,

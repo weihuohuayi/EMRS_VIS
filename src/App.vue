@@ -6,6 +6,7 @@
     <keep-alive exclude='Profile'>
       <router-view></router-view>
     </keep-alive>
+
     <!-- 下方导航栏 -->
     <main-tab-bar />
 

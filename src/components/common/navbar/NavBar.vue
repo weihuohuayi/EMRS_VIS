@@ -22,14 +22,15 @@
 <style scoped>
   .nav-bar {
     display: flex;
-    height: 44px;
-    line-height: 44px;
+    /* height: 44px; */
+    line-height: var(--navbar-height);
     /* 文字居中排列 */
     text-align: center;
 
-    box-shadow: 30px 10px 30px rgba(7, 7, 0, 0);   /* TODO 无法实现 */
 
-    /* position: fixed; */
+    /* TODO 无法实现 */
+
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;

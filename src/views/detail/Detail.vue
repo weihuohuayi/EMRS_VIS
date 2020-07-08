@@ -10,7 +10,7 @@
 
 <script>
   // import axios from 'axios'
-  import { request } from '../../../network/api'
+  import { request } from 'network/api'
 
   export default {
     name: 'Detail',

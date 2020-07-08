@@ -8,14 +8,20 @@ import Patients from '../views/patients/Patients'
 import Surgery from '../views/surgery/Surgery'
 import Medicine from '../views/medicine/Medicine'
 
-// 导入页面组件：路由懒加载方法
+
+// 导入页面内组件：路由懒加载方法
+// Home子组件
 const HomeNews = () => import('views/home/HomeNews')
 const HomeMessage = () => import('views/home/HomeMessage')
 
-const PatDetail = () => import('views/patients/user/PatDetail')
-const PatList = () => import('views/patients/list/PatList')
-const CategoryList = () => import('views/patients/list/CategoryList')
-const DiseaseKey = () => import('views/patients/disease/Disease')
+// Patients
+
+
+// Detail
+const Detail = () => import('views/detail/Detail')
+
+// Disease
+
 
 const Profile = () => import('views/profile/Profile')
 
@@ -57,32 +63,16 @@ const routes = [
     path: '/patients',
     component: Patients,
     meta: {
-      title: '患者信息'
+      title: '患者列表'
     },
-    children: [
-      {
-        // 配置孙组件默认路径
-        path: '',
-        component: PatList
-      },
-      {
-        path: 'list',
-        component: PatList
-      },
-      {
-        path: 'catgory',
-        component: CategoryList
-      },
-      {
-        path: 'diseaseKey',
-        component: DiseaseKey
-      },
-      {
-        // 动态路由
-        path: '/details/:bedNum',
-        component: PatDetail
-      }
-    ]
+  },
+  {
+    // 动态路由
+    path: '/details/:bedNum',
+    component: Detail,
+    meta: {
+      title: '患者详情'
+    }
   },
   {
     path: '/surgery',
