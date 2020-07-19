@@ -48,7 +48,7 @@
   import { kidneyLabResult } from 'network/kidney.js'
 
   // 导入请求获取的检验结果数据的处理函数
-  import getBloodData from 'common/datasplit/blood.js'
+  import getBloodData from 'common/datafilter/blood.js'
 
 
 
@@ -147,14 +147,6 @@
         }
         var bloodData = getBloodData(this.labdata)
         this.bloodWhitedata = bloodData.bloodWhite[param.type]
-
-
-
-        // this.option.series[0].data = key[0];
-        // this.option.series[1].data = key[1];
-
-        // let myChart = this.$echarts.init(this.$refs.mapbox);
-        // myChart.setOption(this.option);
 
       }
     },
@@ -349,3 +341,5 @@
     }
   }
 </script>
+
+<!-- slot的样式可以在子组件内进行定义 -->

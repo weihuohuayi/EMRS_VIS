@@ -197,59 +197,5 @@
 </script>
 
 <style>
-  .labassay {
-    /* height:auto;  */
-  }
 
-  .labassay .caption {
-    display: flex;
-    line-height: 1;
-    /* flex 水平居中 */
-    /* justify-content: center; */
-    /* flex 垂直居中 */
-    align-items: center;
-  }
-
-  .labassay h3 {
-    height: 0.75rem;
-    padding-right: 0.75rem;
-    border-right: 0.1rem solid #00f2f1;
-  }
-
-  .labassay a {
-    padding: 0.167rem;
-    font-size: 0.667rem;
-    margin: 0.125rem 0 0 0.875rem;
-    border-radius: 0.125rem;
-    color: #0bace6;
-  }
-
-  .labassay a.active {
-    background-color: #4c9bfd;
-    color: #fff;
-  }
-
-  .labassay .inner {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .labassay .chart {
-    flex: 1;
-    padding-top: 0.6rem;
-    position: relative;
-  }
-
-  .labassay .label {
-    position: absolute;
-    left: 1.75rem;
-    top: 0.75rem;
-    color: #4996f5;
-    font-size: 0.583rem;
-  }
-
-  .labassay .line {
-    width: 100%;
-    height: 100%;
-  }
 </style>

@@ -76,13 +76,25 @@
     background: url('~assets/img/dashboard/bg.jpg');
     background-repeat: no-repeat top center;
     background-size: 100% 100%;
+    /* background-size: contain; */
+    /* 自适应 */
   }
 
   .mainbox {
     /* 大屏参数 */
-    /* min-width: 1024px;
-    max-width: 1920px; */
+
+    /* 要设置版心的高度，用一个最小高度，真实的高度用内容撑开 */
+    /* min-width: 700px; */
+
+    /* 保证项目中的内容能够看清，所以设置一个最小的宽度，哪怕有滚动条 */
+    /* min-width: 1000px; */
+    /* 保证项目中的内容不失真，不虚化，有一个最大宽度，哪怕两边都留白 */
+    /* max-width: 1920px; */
+
+    /* 版心居中 */
     margin: 0 auto;
+
+    /* 设置版心背景图，自适应参考上个标签 no-repeat 和 contain */
     /* background-color: wheat; */
     padding: 0.625rem 0.625rem 0;
 
