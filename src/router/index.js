@@ -23,6 +23,12 @@ const Detail = () => import('views/detail/Detail')
 // Disease
 
 
+// 独立开发
+// DataV eChart
+// const Dashboard = () => import('components/content/dashboard/Dashboard')
+
+
+
 const Profile = () => import('views/profile/Profile')
 
 // 1. 通过Vue.use （插件） ，安装插件
@@ -94,7 +100,14 @@ const routes = [
     meta: {
       title: '用户'
     }
-  }
+  },
+  // {
+  //   path: '/dashboard',
+  //   component: Dashboard,
+  //   meta: {
+  //     title: '大屏可视化'
+  //   }
+  // }
 ]
 
 const router = new VueRouter({

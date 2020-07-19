@@ -3,9 +3,12 @@
     <div class="item-info">
       <h3>床号：{{patsItem.bedNum}}</h3>
       <p class="name">姓名：{{patsItem.name[0]}}XX</p>
-      <span>入院时间：{{patsItem.OrderDate}}</span> <span>医疗组：{{patsItem.AttendingDoctorCode}}</span>
-      <p class="surgery">手术安排：{{patsItem.operationDate}}</p>
-      <router-link :to="'/details/'+patsItem.bedNum" tag="button" replace>详细信息</router-link>
+      <span>入院时间：{{patsItem.OrderDate | dataFormat("MM-DD")}}</span> <span>医疗组：{{patsItem.AttendingDoctorCode}}</span>
+      <p class="surgery">手术安排：{{patsItem.operationDate | dataFormat("MM-DD")}}</p>
+
+      <!-- router-link由于存在组件复用，因此反复进入需要刷新才能显示新的页面信息   @click.native="flushCom"  -->
+      <!-- <router-link :to="'/details/'+patsItem.bedNum" tag="button" @click.native="flushCom" push>详细信息</router-link> -->
+      <router-link :to="'/details/'+patsItem.bedNum" tag="button" push>详细信息</router-link>
     </div>
   </div>
 
@@ -20,6 +23,13 @@
         default() {
           return {}
         }
+      }
+    },
+    methods: {
+      flushCom: function () {
+        //router是路由实例,例如:var router = new Router({})
+        //router.go(n)是路由的一个方法，意思是在history记录中前进或者后退多少步，0就表示还是当前，类似window.history.go(n)
+        // this.$router.go(0);
       }
     }
   }

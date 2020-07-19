@@ -1,45 +1,95 @@
 <template>
-  <div>
-    <h2>{{bedNum}} 详细信息</h2>
-    <!-- <p>{{$route.params.bedNum}}</p> -->
-    <p>{{patAbstract}}</p>
+  <div id="detail">
+    <!-- 导航栏 -->
+    <detail-nav-bar></detail-nav-bar>
+    <br>
+    <br>
+
+
+    <h2>{{$route.params.bedNum}}</h2>
+    <!-- 患者主诉信息 -->
+    <detail-base-info :pat-info="patInfo"></detail-base-info>
+    <!-- 患者化验指标 -->
+    <dash-board-lab></dash-board-lab>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   </div>
 
 </template>
 
 <script>
-  // import axios from 'axios'
-  import { request } from 'network/api'
+  // 导入方法
+  import { getDetail, patient } from 'network/detail'
+
+  // 导入公共组件
+  import NavBar from 'components/common/navbar/NavBar'
+
+
+  // 导入子组件
+  import DetailNavBar from './childComps/DetailNavBar'
+  import DetailBaseInfo from './childComps/DetailBaseInfo'
+
+
+  // 导入大屏组件
+  import DashBoardLab from 'components/content/dashboard/DashBoardLab'
+
+
 
   export default {
     name: 'Detail',
-    computed: {
-      // $route 获取router中激活的路由
-      bedNum() {
-        return this.$route.params.bedNum
-      }
+    components: {
+      // 子组件
+      DetailNavBar,
+      DetailBaseInfo,
+      // 公共组件
+      NavBar,
+      // 大屏组件
+      DashBoardLab
+
     },
+    // computed: {
+    //   // $route 获取router中激活的路由
+    //   bedNum() {
+    //     return this.$route.params.bedNum
+    //   }
+    // }, 
     data() {
       return {
-        patAbstract: ''
+        bedNum: null,
+        patAbstract: '空行',
+        patInfo: {}
       }
     },
     created() {
-      request(
-        {
-          url: '/OnlinePatient/' + this.bedNum
-        }).then(
-          res => {
-            console.log(res)
-            this.patAbstract = res.data.data
-          }).catch(err => {
-            console.log(err)
-          })
+      this.bedNum = this.$route.params.bedNum;
+      console.log(this.$route.params.bedNum)
+      // 请求详情数据
+      getDetail(this.bedNum).then(
+        res => {
+          const data = res.data.data
+          console.log(data)
+
+          // 创建患者基本信息
+          this.patInfo = new patient(data.name, data.OrderDate, data.operationDate, data.MedRec)
+
+          // 创建患者
+        }).catch(err => {
+          console.log(err)
+        })
     }
   }
 </script>
 
 <style scoped>
+  h2 {
+    color: maroon;
+  }
 
+  .spacetemp {
+    margin-bottom: 100px;
+  }
 </style>
