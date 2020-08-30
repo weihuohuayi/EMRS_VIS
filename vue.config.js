@@ -19,5 +19,8 @@ module.exports = {
       }
     }
   },
-  lintOnSave: false
+  lintOnSave: false,
+  devServer: {
+    disableHostCheck: true,  //实现内网穿透  
+  },
 }

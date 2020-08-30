@@ -7,7 +7,8 @@ export function request(config) {
   return new Promise((resolve, reject) => {
     // 1.创建axios实例
     const instance = axios.create({
-      baseURL: 'http://127.0.0.1:5000/api',
+      // baseURL: 'http://127.0.0.1:5000/api',
+      baseURL: 'http://hunter_backend.vaiwan.com/api',
       timeout: 5000
     })
 

@@ -10,7 +10,7 @@
         <!-- <div class="label">单位:万</div> -->
         <!-- 开放插槽 -->
         <slot name="table"></slot>
-        <slot name="quarter-table"></slot>
+        <!-- <slot name="quarter-table"></slot> -->
         <div class='quater-chart'>
           <div class='slot'>
             <slot name="chart-left-top"></slot>
@@ -47,7 +47,7 @@
   export default {
     data() {
       return {
-        title: "血液系统：血常规",
+        title: "血液系统：血常规（血细胞）",
       }
     }
   };
@@ -89,6 +89,11 @@
   .labassay .inner {
     display: flex;
     flex-direction: column;
+  }
+
+
+  .labassay .slot {
+    margin: 0px;
   }
 
 

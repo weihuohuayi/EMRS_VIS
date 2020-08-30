@@ -20,7 +20,7 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  store,
+  store,  //将store 写入这里，相当于执行后面这个操作 Vue.prototype.$store = store
   render: h => h(App)
 }).$mount('#app')
 

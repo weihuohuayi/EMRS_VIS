@@ -60,7 +60,7 @@
         link: this.textlink,
         // title: this.cData.title,
         legend_data: this.cData.legend_data,
-        axis_data: this.cData.axis_data,
+        // axis_data: this.cData.axis_data,
         series_data: this.cData.series_data,
         x_name: this.xname,
         y_name: this.yname,
@@ -147,7 +147,7 @@
             textStyle: {
               color: '#4c9bfd', // 图例文字颜色
             },
-            bottom: '10%',
+            bottom: '5%',
             right: '10%' //距离右边10%
           },
           // 网格配置，图表在DOM中的定位
@@ -201,7 +201,7 @@
               fontWeight: 'bold',
               fontSize: '10'
             },
-            data: this.axis_data,
+            // data: this.axis_data,
             axisTick: {
               show: false //去除刻度线
             },
@@ -353,26 +353,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h3 {
-    margin: 40px 0 0;
-  }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-  .slotbox {
-    position: absolute;
-    top: '0rem'
-  }
 </style>

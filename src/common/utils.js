@@ -25,6 +25,24 @@ var Utils = {
     var d = new Date();
     var age = d.getFullYear() - birthday.getFullYear() - ((d.getMonth() < birthday.getMonth() || d.getMonth() == birthday.getMonth() && d.getDate() < birthday.getDate()) ? 1 : 0);
     return age
+  },
+
+
+  // d3
+  stringToInt(parma) {
+    return isNaN(parma) ? parma : parma + 'px'
+  },
+  getTrueNum(father, percent) {
+    if (typeof percent === 'number') {
+      return percent > father ? father : percent
+    } else {
+      return father * this.percentToPoint(percent)
+    }
+  },
+  percentToPoint(percent) {
+    let point = percent.replace('%', '').replace(' ', '')
+    point = point / 100
+    return point
   }
 }
 

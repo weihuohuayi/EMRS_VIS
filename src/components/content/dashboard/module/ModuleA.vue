@@ -22,14 +22,12 @@
     </kidney>
 
 
-    <!-- <liver/> -->
-    <!-- <cardiology/> -->
 
   </div>
 </template>
 <script>
 
-  // 导入各系统模板
+  // 导入各生理系统模板
   import Kidney from "../element/labassay/Kidney"
   import BloodRoutine from "../element/labassay/BloodRoutine"
 
@@ -189,144 +187,6 @@
           this.bloodPltdata = bloodData.bloodPlt
           this.bloodWhitedata = bloodData.bloodWhite['option_white_abs']
 
-
-
-
-
-          // // 获取肾脏数据
-          // for (var key in this.kidneyres) {
-          //   for (var item in jsonData) {
-          //     if (key == item) {
-          //       this.kidneyres[key] = jsonData[item]
-          //     }
-          //   }
-          // }
-          // console.log('kidneyres')
-          // console.log(this.kidneyres)
-
-
-          // // 创建化验结果对象
-          // // this.kidneydata = new kidneyLabResult(this.kidneyres)
-          // this.kidneydata = {
-          //   title: '肾功能',
-          //   // axis_data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-          //   legend_data: ['尿红细胞定量', '尿白细胞定量', '嗜酸性粒细胞百分比'],
-          //   series_data: [
-          //     {
-          //       name: "尿红细胞定量",
-          //       // 数据
-          //       data: [['2020-06-18 09:52:43', 1.0]],
-          //       // 图表类型
-          //       type: "line",
-          //       markPoint: {
-          //         label: {
-          //           normal: {
-          //             show: true,
-          //             backgroundColor: '#fff',
-          //             position: 'left',  // top 
-          //             // color: '#41D6C3',
-          //             // borderColor: 'rgba(65,214,195,0.3)',
-          //             // borderWidth: 1,
-          //             // padding: 8,${unit}
-          //             formatter: `{b}: {c} μg/L(FEU)`
-          //           }
-          //         },
-          //         symbol: 'circle',
-          //         itemStyle: {
-          //           normal: {
-          //             borderColor: 'rgba(90,170,250,0.3)',
-          //             borderWidth: 15
-          //           }
-          //         },
-          //         symbolSize: 7,
-          //         data: [
-          //           { type: 'max', name: 'Max' }
-          //         ]
-          //       },
-          //       markLine: {
-          //         symbol: ['circle', 'arrow'],    //表示箭头从左向右
-          //         //symbol:['arrow', 'circle'], //表示箭头从右向左
-          //         //symbol:"none",            //表示没有箭头的直线
-
-          //         //警示线标签
-          //         label: {
-          //           show: true,
-          //           position: "middle",    //将警示值放在哪个位置，start middle end 开头 中间 结尾
-          //           formatter: "参考范围",   //警示线上显示内容
-          //         },
-          //         //警示线的样式，虚实  颜色
-          //         lineStyle: {
-          //           // type: "solid",
-          //           color: "#FF4B5C",
-          //         },
-
-
-          //         data: [
-          //           //可以有多条警示线，另外多条警示线还可以对应不同的yAxis，
-          //           //name警示线命名，type值有 max min average，
-          //           // { type: 'average', name: '平均值' }
-          //           //警示线标签及样式单独设置
-          //           {
-          //             name: 'Y轴值为3000的水平线', yAxis: 3000,
-          //             label: {
-          //               show: true,
-          //               position: "middle", // label标签内容所在位置为中间
-          //               formatter: "参考上限",
-          //             },
-          //             lineStyle: {
-          //               // type: "solid",
-          //               color: "#FF4B5C",
-          //             },
-          //           },
-          //           //两个坐标之间的标线
-          //           {
-          //             name: 'Y轴值为1080的水平线', yAxis: 1080,
-          //             label: {
-          //               show: true,
-          //               position: "middle", // label标签内容所在位置为中间
-          //               formatter: "参考下限",
-          //             },
-          //             lineStyle: {
-          //               // type: "solid",
-          //               color: "#FF4B5C",
-          //             },
-          //           },
-
-
-          //         ]
-          //       },
-          //       // 圆滑连接
-          //       smooth: true,
-          //       itemStyle: {
-
-          //       }
-          //     },
-          //     {
-          //       name: "尿白细胞定量",
-          //       // 数据
-          //       data: [['2020-06-16 09:36:24', 5.3]],
-          //       // 图表类型
-          //       type: "line",
-          //       // 圆滑连接
-          //       smooth: true,
-          //       itemStyle: {
-
-          //       }
-          //     },
-          //     {
-          //       name: "嗜酸性粒细胞百分比",
-          //       // 数据
-          //       data: [['2020-06-16 08:37:24', 2.6], ['2020-06-18 09:18:05', 4.5], ['2020-06-20 10:46:07', 0.0]],
-          //       // 图表类型
-          //       type: "line",
-          //       // 圆滑连接
-          //       smooth: true,
-          //       itemStyle: {
-
-          //       }
-          //     },
-          //   ]
-          // }
 
 
 
